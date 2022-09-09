@@ -67,4 +67,15 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+@Test
+    public void getOrderTotal_should_return_0_if_no_items_are_ordered() {
+        int orderTotal = 100;
+        assertEquals(0, orderTotal);
+    }
+
+    @Test
+    public void getOrderTotal_should_return_correct_total_if_items_are_ordered() {
+        int orderTotal = 31;
+        assertEquals(388, orderTotal);
+    }
 }
