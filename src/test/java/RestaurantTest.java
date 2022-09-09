@@ -66,16 +66,12 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-@Test
-    public void getOrderTotal_should_return_0_if_no_items_are_ordered() {
-        int orderTotal = 100;
-        assertEquals(0, orderTotal);
-    }
-
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>View Total Order Cost<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
-    public void getOrderTotal_should_return_correct_total_if_items_are_ordered() {
-        int orderTotal = 31;
-        assertEquals(388, orderTotal);
+    public void add_items_from_menu_should_show_total_order_cost() {
+        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        int totalOrderCost = restaurant.getTotalOrderCost(selectedItems);
+        assertEquals(388, totalOrderCost);
     }
+//<<<<<<<<<<<<<<<<<<<<<<<View Total Order Cost>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
